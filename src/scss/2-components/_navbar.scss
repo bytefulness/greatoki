@@ -1,0 +1,23 @@
+.navbar {
+  background-color: $bg-primary;
+  color: $color-light;
+  height: 4.375em;
+
+  & .flex {
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  .nav__link {
+    color: $link;
+    padding: 0.5em 0.75em;
+    margin: 0 0.5em;
+
+    &:hover {
+      border-bottom: 2px solid #fff;
+    }
+  }
+}
