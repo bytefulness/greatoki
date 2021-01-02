@@ -16,24 +16,79 @@
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body>
-    <div class="navbar">
-      <div class="container flex-row">
-        <h1 class="logo">Greatoki.</h1>
-        <nav>
-          <ul class="navbar__nav">
-            <li class="nav__item">
-              <a href="home.html" class="nav__link">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="features.html" class="nav__link">Features</a>
-            </li>
-            <li class="nav__item">
-              <a href="docs.html" class="nav__link">Docs</a>
-            </li>
-          </ul>
-        </nav>
+    <header>
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="container flex-row">
+          <h1 class="logo">Greatoki.</h1>
+          <nav>
+            <ul class="navbar__nav">
+              <li class="nav__item">
+                <a href="home.html" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="features.html" class="nav__link">Features</a>
+              </li>
+              <li class="nav__item">
+                <a href="docs.html" class="nav__link">Docs</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
+      <!-- Showcase -->
+      <section class="showcase">
+        <div class="container grid">
+          <div class="showcase__test">
+            <h1 class="showcase__heading">Easier Deployment</h1>
+            <p class="showcase__message">
+              Deploy web apps of all kinds, from large scale enterprise APIs to
+              static websites for individuals. Fill out the form the try a demo
+              of out platform
+            </p>
+            <a href="features.html" class="btn btn--outline">Read More</a>
+          </div>
+
+          <div class="showcase__form card">
+            <h2>Request a Demo</h2>
+            <form>
+              <div class="form-control">
+                <label for="name"
+                  ><input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                    required
+                /></label>
+              </div>
+              <div class="form-control">
+                <label for="companyName"
+                  ><input
+                    type="text"
+                    name="companyName"
+                    id="companyName"
+                    placeholder="Company Name"
+                    required
+                /></label>
+              </div>
+              <div class="form-control">
+                <label for="email"
+                  ><input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Your email"
+                    required
+                /></label>
+              </div>
+              <input type="submit" value="Send" class="btn btn-primary" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
+
     <script src="dist/all.js"></script>
   </body>
 </html>

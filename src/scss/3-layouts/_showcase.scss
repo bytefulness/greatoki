@@ -1,0 +1,57 @@
+.showcase {
+  height: 25em;
+  background-color: $primary;
+  color: $color-light;
+  // If there will need to position element in showcase
+  position: relative;
+
+  & .grid {
+    grid-template-columns: 55% 40%;
+    // Remove overflow thus any items inside it can move from the constrait of parent
+    overflow: visible;
+  }
+
+  & h1 {
+    font-size: 3em;
+  }
+
+  &__message {
+    margin: 1.5em 0;
+  }
+
+  &__form {
+    position: relative;
+    top: 60px;
+    width: 25em;
+    height: 22em;
+    padding: 2em;
+    justify-self: flex-start;
+    z-index: 100;
+
+    .form-control {
+      margin: 2em 0;
+    }
+
+    & input[type="text"],
+    & input[type="email"] {
+      border: 0;
+      border-bottom: 1px solid #b4becb;
+      width: 100%;
+    }
+
+    & input:focus {
+      outline: none;
+    }
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    background: #fff;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    transform: skewY(-2deg);
+  }
+}

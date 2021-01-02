@@ -1,13 +1,25 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2.5em;
+}
+
 .flex-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // flex('flex', $direction, $justify-content, align-items)
+  @include flex(row, center, center);
   height: 100%;
 }
 
 .flex-column {
-  display: flex;
-  flex-direction: column;
+  // flex('flex', $direction, $justify-content, align-items)
+  @include flex(column, center, center);
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
   justify-content: center;
   align-items: center;
   height: 100%;
