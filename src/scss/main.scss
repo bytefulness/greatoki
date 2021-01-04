@@ -1,3 +1,16 @@
-@import "1-base/base-index";
-@import "2-components/components-index";
-@import "3-layouts/layouts-index";
+// Base
+@import "1-base/variables";
+@import "1-base/mixins";
+
+@import "1-base/base";
+@import "1-base/utility";
+@import "1-base/fonts";
+
+// Components
+
+@import "2-components/navbar";
+@import "2-components/buttons";
+@import "2-components/cards";
+
+// Layouts
+@import "3-layouts/showcase";

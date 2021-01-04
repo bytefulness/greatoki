@@ -28,6 +28,10 @@
     justify-self: flex-start;
     z-index: 100;
 
+    .form__title {
+      font-weight: bold;
+    }
+
     .form-control {
       margin: 2em 0;
     }
