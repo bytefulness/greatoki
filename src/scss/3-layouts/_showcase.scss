@@ -36,8 +36,8 @@
       margin: 2em 0;
     }
 
-    & input[type="text"],
-    & input[type="email"] {
+    & input[type='text'],
+    & input[type='email'] {
       border: 0;
       border-bottom: 1px solid #b4becb;
       width: 100%;
@@ -49,7 +49,7 @@
   }
 
   &::after {
-    content: " ";
+    content: ' ';
     position: absolute;
     background: #fff;
     height: 100px;
