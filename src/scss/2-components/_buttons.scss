@@ -1,9 +1,7 @@
 .btn {
   display: inline-block;
   padding: 0.75em 3em;
-  background: $primary;
   border-radius: 0.5em;
-  color: $color-light;
   border: none;
   cursor: pointer;
   font-size: 0.9em;
@@ -11,6 +9,31 @@
   &:hover {
     opacity: 0.9;
   }
+}
+
+// Backgrounds and Colors
+.bg--primary,
+.btn--primary {
+  background-color: $primary;
+  color: $color-light;
+}
+
+.bg--secondary,
+.btn--secondary {
+  background-color: $secondary;
+  color: $color-light;
+}
+
+.bg--dark,
+.btn--dark {
+  background-color: $dark;
+  color: $color-light;
+}
+
+.bg--light,
+.btn--light {
+  background-color: $light;
+  color: #333;
 }
 
 .btn--outline {

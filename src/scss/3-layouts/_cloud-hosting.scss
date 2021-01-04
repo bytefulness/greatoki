@@ -1,0 +1,14 @@
+.cloud {
+  & .grid {
+    grid-template-columns: 4fr 3fr;
+  }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  &__exp {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}

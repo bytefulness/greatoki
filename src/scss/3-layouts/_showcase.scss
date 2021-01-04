@@ -1,5 +1,5 @@
 .showcase {
-  height: 25em;
+  height: 30em;
   background-color: $primary;
   color: $color-light;
   // If there will need to position element in showcase
@@ -21,7 +21,7 @@
 
   &__form {
     position: relative;
-    top: 60px;
+    top: 100px;
     width: 25em;
     height: 22em;
     padding: 2em;
