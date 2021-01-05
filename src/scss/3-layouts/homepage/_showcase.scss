@@ -18,6 +18,8 @@
     grid-template-columns: 55% 40%;
     // Remove overflow thus any items inside it can move from the constrait of parent
     overflow: visible;
+    height: 90%;
+    justify-content: space-between;
 
     // Added mobile version to utility of the grid.
   }
@@ -38,6 +40,10 @@
     padding: 2em;
     justify-self: flex-end;
     z-index: 100;
+
+    @media (max-width: 1100px) {
+      width: 20em;
+    }
 
     @include tablet {
       width: 25em;

@@ -1,0 +1,1 @@
+{"version":3,"sources":["3-layouts/features/_header.scss"],"names":[],"mappings":"AAAA,kBAEI,WAAY,CACZ,qBAAsB","file":"1-features-index.css","sourcesContent":[".feature-head {\n  img {\n    width: 200px;\n    justify-self: flex-end;\n  }\n}\n"]}
