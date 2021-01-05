@@ -1,0 +1,8 @@
+.footer {
+  & .social {
+    a {
+      color: $color-light;
+      margin: 0 0.5em;
+    }
+  }
+}
