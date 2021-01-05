@@ -3,4 +3,20 @@
   flex-direction: $direction;
   justify-content: $justify-content;
   align-items: $align-items;
-} ;
+}
+
+// Breakpoints
+
+// Tablets and under
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+// Mobile Breakpoints
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

@@ -29,6 +29,14 @@
   font-size: 4rem;
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .flex-row {
   // flex('flex', $direction, $justify-content, align-items)
   @include flex(row, center, center);
@@ -41,6 +49,13 @@
   height: 100%;
 }
 
+@include mobile {
+  .flex-column-m {
+    @include flex(column, center, center);
+    height: 100%;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -48,6 +63,18 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+@include tablet {
+  .grid,
+  section.showcase .grid,
+  section.stats .grid,
+  section.cli .grid,
+  section.cloud .grid,
+  footer.footer .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .grid-3 {

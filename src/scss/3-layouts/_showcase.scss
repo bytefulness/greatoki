@@ -5,10 +5,21 @@
   // If there will need to position element in showcase
   position: relative;
 
+  @include tablet {
+    height: auto;
+
+    &__text {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+
   & .grid {
     grid-template-columns: 55% 40%;
     // Remove overflow thus any items inside it can move from the constrait of parent
     overflow: visible;
+
+    // Added mobile version to utility of the grid.
   }
 
   & h1 {
@@ -27,6 +38,20 @@
     padding: 2em;
     justify-self: flex-end;
     z-index: 100;
+
+    @include tablet {
+      width: 25em;
+      top: 40px;
+      justify-self: center;
+      margin: auto;
+    }
+
+    @include mobile {
+      width: 20em;
+      top: 40px;
+      justify-self: center;
+      margin: auto;
+    }
 
     .form__title {
       font-weight: bold;

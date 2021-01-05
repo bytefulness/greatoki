@@ -3,12 +3,21 @@
   color: $color-light;
   height: 4.375em;
 
+  @include mobile {
+    height: 8em;
+  }
+
   & .flex-row {
     justify-content: space-between;
   }
 
   &__nav {
     display: flex;
+
+    @include mobile {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
   }
 
   .nav__link {
