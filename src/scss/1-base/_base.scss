@@ -43,3 +43,10 @@ img {
   width: 100%;
   height: auto;
 }
+
+code,
+pre {
+  background: #333;
+  color: $color-light;
+  padding: 0.8rem;
+}

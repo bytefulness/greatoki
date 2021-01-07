@@ -29,6 +29,28 @@
   font-size: 4rem;
 }
 
+// Alert
+.alert {
+  background-color: $color-light;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 1rem 0;
+
+  & i {
+    margin-right: 0.75rem;
+  }
+
+  &--success {
+    background-color: $success-color;
+    color: $color-light;
+  }
+
+  &--error {
+    background-color: $error-color;
+    color: $color-light;
+  }
+}
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -71,7 +93,9 @@
   section.stats .grid,
   section.cli .grid,
   section.cloud .grid,
-  footer.footer .grid {
+  footer.footer .grid,
+  main section.features-main .grid,
+  main.docs-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }

@@ -40,3 +40,16 @@
   background: transparent;
   border: 1px solid $color-light;
 }
+
+// Text Color
+.text--primary {
+  color: $primary !important;
+}
+
+.text--secondary {
+  color: $secondary;
+}
+
+.text--dark {
+  color: $dark;
+}

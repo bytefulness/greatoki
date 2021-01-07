@@ -1,3 +1,14 @@
+.docs-head {
+  @include tablet {
+    & {
+      text-align: center;
+    }
+    & img {
+      justify-self: center;
+    }
+  }
+}
+
 .docs-main {
   & .grid {
     grid-template-columns: 1fr 2fr;
