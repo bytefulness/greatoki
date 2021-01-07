@@ -1,5 +1,6 @@
 .stats {
   padding: 6.25em 0;
+  animation: slideInFromBottom 1s ease-in-out;
 
   &__heading {
     max-width: 31.25em;
