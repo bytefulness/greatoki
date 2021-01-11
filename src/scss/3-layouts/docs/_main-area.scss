@@ -39,7 +39,14 @@
     }
   }
 
-  & h3 {
+  h3 {
     margin: 20px 0;
+  }
+
+  code,
+  pre {
+    background: #333;
+    color: $color-light;
+    padding: 0.8rem;
   }
 }

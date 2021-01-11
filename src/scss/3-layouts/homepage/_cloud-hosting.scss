@@ -1,4 +1,9 @@
 .cloud {
+  img {
+    width: 300px;
+    justify-self: flex-end;
+  }
+
   & .grid {
     grid-template-columns: 4fr 3fr;
   }

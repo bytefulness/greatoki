@@ -13,6 +13,52 @@
   text-align: center;
 }
 
+// Backgrounds and Colors
+.bg--primary,
+.btn--primary {
+  background-color: $primary;
+  color: $color-light;
+}
+
+.bg--secondary,
+.btn--secondary {
+  background-color: $secondary;
+  color: $color-light;
+}
+
+.bg--dark,
+.btn--dark {
+  background-color: $dark;
+  color: $color-light;
+}
+
+.bg--light,
+.btn--light {
+  background-color: $light;
+  color: #333;
+}
+
+.bg--neutral {
+  background-color: $netrual;
+}
+
+// Text Color
+.text--primary {
+  color: $primary !important;
+}
+
+.text--secondary {
+  color: $secondary;
+}
+
+.text--dark {
+  color: $dark;
+}
+
+.text-light {
+  color: $color-light;
+}
+
 // Text sizes
 .lead {
   font-size: 1.25em;

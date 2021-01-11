@@ -1,43 +1,45 @@
-"use strict";
+'use strict';
 
 // Initialize modules
 // Importing specific Gulp API functions lets us write them below as series() instead of gulp.series()
-const { src, dest, watch, series, parallel } = require("gulp");
+const { src, dest, watch, series, parallel } = require('gulp');
 
 // Importing all the Gulp-related packages we want to use
-const autoprefixer = require("autoprefixer");
-const browserSync = require("browser-sync").create();
-const cssnano = require("cssnano");
-const concat = require("gulp-concat");
-const postcss = require("gulp-postcss");
-const sass = require("gulp-sass");
-const sourcemaps = require("gulp-sourcemaps");
-const imagemin = require("gulp-imagemin");
-const uglify = require("gulp-uglify");
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+const cssnano = require('cssnano');
+const concat = require('gulp-concat');
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
 
 // Path files
 const files = {
-  htmlPath: "./*.html",
-  scssPath: "src/scss/**/*.scss",
-  jsPath: "src/js/**/*.js",
-  imagesPath: "src/assets/images/*",
+  htmlPath: './*.html',
+  scssPath: 'src/scss/**/*.scss',
+  jsPath: 'src/js/**/*.js',
+  imagesPath: 'src/assets/images/**/*',
 };
 
 // Tasks
 
 // imageMin: Optimization for images
 function imageMin() {
-  return src(files.imagesPath).pipe(imagemin()).pipe(dest("dist/images"));
+  return src(files.imagesPath)
+    .pipe(imagemin())
+    .pipe(dest('dist/assets/images/'));
 }
 
 // Sass Task: Compile the main.scss file into style.css
 function scssTask() {
   return src(files.scssPath)
     .pipe(sourcemaps.init()) // initialize sourcemaps first
-    .pipe(sass().on("error", sass.logError)) // compile SCSS to CSS
+    .pipe(sass().on('error', sass.logError)) // compile SCSS to CSS
     .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
-    .pipe(sourcemaps.write(".")) // write sourcemaps file in current directory
-    .pipe(dest("dist")) // put final CSS in dist folder
+    .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
+    .pipe(dest('dist')) // put final CSS in dist folder
     .pipe(browserSync.stream()); // This won't reload page but inject changes without refresh  the page thus you'll see any changes without have to go top of the page.
 }
 
@@ -49,9 +51,9 @@ function jsTask() {
     files.jsPath,
     //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
   ])
-    .pipe(concat("all.js"))
+    .pipe(concat('all.js'))
     .pipe(uglify())
-    .pipe(dest("dist"))
+    .pipe(dest('dist'))
     .pipe(browserSync.stream());
 }
 
@@ -61,12 +63,12 @@ function jsTask() {
 function watchTask() {
   browserSync.init({
     server: {
-      baseDir: "./",
+      baseDir: './',
     },
   }); // It"ll create a server.
   // Track img folder
-  watch("src/assets/images/", imageMin);
-  watch(files.htmlPath).on("change", browserSync.reload); // It will refresh page.
+  watch('src/assets/images/', imageMin);
+  watch(files.htmlPath).on('change', browserSync.reload); // It will refresh page.
   // Watch image folder
   watch(
     [files.scssPath, files.jsPath],

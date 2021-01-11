@@ -1,15 +1,9 @@
-.features-head {
-  @include tablet {
-    & {
-      text-align: center;
-    }
-    & img {
-      justify-self: center;
-    }
-  }
-}
-
 .features-main {
+  img {
+    width: 75px;
+    margin-right: 1.25rem;
+  }
+
   & .card > i {
     margin-right: 1.25rem;
   }

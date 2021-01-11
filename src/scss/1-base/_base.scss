@@ -23,6 +23,7 @@ input {
 }
 
 body {
+  background-color: $netrual;
   font-family: $font-stack;
   color: #333;
   line-height: 1.6;
@@ -42,11 +43,4 @@ p {
 img {
   width: 100%;
   height: auto;
-}
-
-code,
-pre {
-  background: #333;
-  color: $color-light;
-  padding: 0.8rem;
 }

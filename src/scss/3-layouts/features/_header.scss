@@ -3,9 +3,18 @@
     width: 200px;
     justify-self: flex-end;
   }
+  @include tablet {
+    & {
+      text-align: center;
+    }
+    & img {
+      justify-self: center;
+    }
+  }
 }
 
 .feature-sub-head {
+  background-color: $primary;
   img {
     width: 300px;
     justify-self: flex-end;
