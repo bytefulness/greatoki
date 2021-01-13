@@ -2,6 +2,9 @@
   img {
     width: 75px;
     margin-right: 1.25rem;
+    @include mobile {
+      margin-right: 0;
+    }
   }
 
   & .card > i {

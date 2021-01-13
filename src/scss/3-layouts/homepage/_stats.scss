@@ -1,10 +1,16 @@
 .stats {
   padding: 6.25em 0;
   animation: slideInFromBottom 1s ease-in-out;
+  @include mobile {
+    padding: 6.25em 0 2em 0;
+  }
 
   img {
-    height: 160px;
+    width: 160px;
     margin-bottom: 1em;
+    @include mobile {
+      width: 120px;
+    }
   }
 
   &__heading {

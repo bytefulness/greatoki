@@ -2,6 +2,9 @@
   img {
     width: 300px;
     justify-self: flex-end;
+    @include mobile {
+      justify-self: center;
+    }
   }
 
   & .grid {
